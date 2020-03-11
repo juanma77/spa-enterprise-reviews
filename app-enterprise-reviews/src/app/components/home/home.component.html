@@ -1,30 +1,25 @@
 <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Last name</th>
-        <th scope="col">Nickname</th>
+        <th scope="col">Puntuaction</th>
+        <th scope="col">Title</th>
+        <th scope="col">Resume</th>
+        <th scope="col">IP Address</th>
+        <th scope="col">Date</th>
+        <th scope="col">Enterprise Name</th>
+        <th scope="col">User Name</th>
+
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>John</td>
-        <td>Williams</td>
-        <td>johnw</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Martha</td>
-        <td>Jackson</td>
-        <td>marthaj</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Jamie</td>
-        <td>Stevenson</td>
-        <td>jamest</td>
+      <tr *ngFor="let review of reviews">
+        <td>{{review.punctuacion}}</td>
+        <td>{{review.title}}</td>
+        <td>{{review.resume}}</td>
+        <td>{{review.ip}}</td>
+        <td>{{review.date}}</td>
+        <td>{{review.enterpriseName}}</td>
+        <td>{{review.userName}}</td>
       </tr>
     </tbody>
   </table>
