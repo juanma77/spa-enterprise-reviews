@@ -9,17 +9,16 @@ import { Review } from '../../interfaces/Ireview';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  API_ENDPOINT = 'http://localhost:8000/api'; 
-  public review: Review[]; 
+ 
+  public reviews: Review[]; 
   
-  constructor( private reviewsService: ReviewsService, private httpClient: HttpClient ) {
-    // To receive data from Laravel side
-    httpClient.get(this.API_ENDPOINT + 'reviews').subscribe((data: Review[]) => {
-      //console.log(data); 
-      this.review = data;
+  constructor(private reviewsService: ReviewsService, private httpClient: HttpClient ) {
+    this.reviewsService.get().subscribe((data: Review[])=>{
+      console.log('Operation done with success!');
+      this.reviews = data; 
+    }, (error) => {
+      console.log(error, 'This can not be done');
     });
-
   }
 
   ngOnInit() {
