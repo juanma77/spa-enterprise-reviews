@@ -8,6 +8,6 @@ export interface Review {
     enterpriseName: string; 
     userName: string;
     created_At?: string; // ? because this field is created at the DB level
-    update_at: string; // ? because this field is created at the DB level  
+    update_at?: string; // ? because this field is created at the DB level  
 
 }

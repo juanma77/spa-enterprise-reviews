@@ -11,7 +11,7 @@ import { Review } from '../../interfaces/Ireview';
 export class HomeComponent implements OnInit {
 
   API_ENDPOINT = 'http://localhost:8000/api'; 
-  review: Review[]; 
+  public review: Review[]; 
   
   constructor( private reviewsService: ReviewsService, private httpClient: HttpClient ) {
     // To receive data from Laravel side

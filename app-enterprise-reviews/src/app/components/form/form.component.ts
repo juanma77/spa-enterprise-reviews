@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Review } from '../../interfaces/Ireview';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  // To use with ngModel
+  review: Review = {
+    puntuaction: null,
+    title: null,
+    resume: null,
+    ip: null,
+    date: null,
+    enterpriseName: null,
+    userName: null
+  };
+
+  constructor() { 
+
+  }
 
   ngOnInit() {
+  }
+
+  saveReview(){
+    console.log(this.review); 
   }
 
 }

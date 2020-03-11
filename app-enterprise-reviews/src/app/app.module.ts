@@ -9,6 +9,8 @@ import { Route, RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule } from '@angular/forms';
+
 const routes: Route [] = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -24,7 +26,8 @@ const routes: Route [] = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
