@@ -1,0 +1,9 @@
+input:required:invalid{
+    outline-color:blue;
+    outline-width:thin;
+}
+
+input:required:valid{
+    outline-color:green;
+    outline-width:thin;
+}

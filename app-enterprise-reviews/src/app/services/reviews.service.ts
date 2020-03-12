@@ -22,6 +22,6 @@ export class ReviewsService {
   // To save or post the data to the API endpoint
   public save(review: Review){
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    return this.httpClient.post(this.API_ENDPOINT + '/reviews', review, {headers:headers }); 
+    return this.httpClient.post(this.API_ENDPOINT + '/reviews', review, {headers:headers}); 
   }  
 }
