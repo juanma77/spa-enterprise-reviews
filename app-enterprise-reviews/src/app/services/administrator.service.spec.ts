@@ -10,3 +10,12 @@ describe('AdministratorService', () => {
     expect(service).toBeTruthy();
   });
 });
+
+describe('true', () => {
+  let service: AdministratorService;
+  let http: null;
+  beforeEach(() => { service = new AdministratorService(http);});
+  it('should return true value', () => {
+    expect(service.get()).toBe('true');
+  });
+});
