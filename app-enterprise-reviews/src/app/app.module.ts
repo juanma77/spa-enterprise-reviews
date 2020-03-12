@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormComponent } from './components/form/form.component';
+import { AdministratorComponent } from './components/administrator/administrator.component';
 
 import { Route, RouterModule } from '@angular/router';
 
@@ -14,14 +15,16 @@ import { FormsModule } from '@angular/forms';
 const routes: Route [] = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'form', component: FormComponent }
+  { path: 'form', component: FormComponent },
+  { path: 'administrator', component: AdministratorComponent }  
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FormComponent
+    FormComponent,
+    AdministratorComponent
   ],
   imports: [
     BrowserModule,
